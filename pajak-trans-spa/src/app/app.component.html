@@ -50,10 +50,10 @@
       </a>
 
       <div class="section-nav__links">
-        <a href="#uslugi">Uslugi</a>
-        <a href="#sprzet">Sprzet</a>
-        <a href="#realizacje">Realizacje</a>
-        <a href="#kontakt">Kontakt</a>
+        <a [class.is-active]="isActive('uslugi')" href="#uslugi">Uslugi</a>
+        <a [class.is-active]="isActive('sprzet')" href="#sprzet">Sprzet</a>
+        <a [class.is-active]="isActive('realizacje')" href="#realizacje">Realizacje</a>
+        <a [class.is-active]="isActive('kontakt')" href="#kontakt">Kontakt</a>
       </div>
 
       <a class="section-nav__cta" href="tel:+48604289858">604 289 858</a>

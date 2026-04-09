@@ -252,10 +252,22 @@
   justify-content: center;
 
   a {
+    border-radius: 999px;
     color: var(--ink);
     font-size: 0.95rem;
     font-weight: 700;
+    padding: 0.55rem 0.85rem;
     text-decoration: none;
+    transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
+  }
+
+  a:hover {
+    transform: translateY(-1px);
+  }
+
+  a.is-active {
+    background: var(--ink);
+    color: #fff8ea;
   }
 }
 

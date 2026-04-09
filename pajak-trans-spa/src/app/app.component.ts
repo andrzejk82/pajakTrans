@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 type Service = {
   title: string;
@@ -31,6 +31,9 @@ type GalleryItem = {
 })
 export class AppComponent {
   title = 'Pajak Trans';
+  activeSection = 'uslugi';
+
+  readonly sectionIds = ['uslugi', 'sprzet', 'realizacje', 'kontakt'];
 
   readonly services: Service[] = [
     {
@@ -93,4 +96,48 @@ export class AppComponent {
     { title: 'Roboty specjalistyczne', image: 'assets/images/realizacja12.jpg' },
     { title: 'Finalny efekt prac', image: 'assets/images/realizacja17.jpg' }
   ];
+
+  @HostListener('window:scroll')
+  onWindowScroll(): void {
+    this.updateActiveSection();
+  }
+
+  @HostListener('window:load')
+  onWindowLoad(): void {
+    this.updateActiveSection();
+  }
+
+  isActive(sectionId: string): boolean {
+    return this.activeSection === sectionId;
+  }
+
+  private updateActiveSection(): void {
+    if (typeof window === 'undefined' || typeof document === 'undefined') {
+      return;
+    }
+
+    const reachedPageBottom =
+      Math.ceil(window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 2;
+    if (reachedPageBottom) {
+      this.activeSection = this.sectionIds[this.sectionIds.length - 1];
+      return;
+    }
+
+    const offset = window.innerHeight * 0.3;
+    let currentSection = this.sectionIds[0];
+
+    for (const sectionId of this.sectionIds) {
+      const element = document.getElementById(sectionId);
+      if (!element) {
+        continue;
+      }
+
+      const top = element.getBoundingClientRect().top;
+      if (top - offset <= 0) {
+        currentSection = sectionId;
+      }
+    }
+
+    this.activeSection = currentSection;
+  }
 }
