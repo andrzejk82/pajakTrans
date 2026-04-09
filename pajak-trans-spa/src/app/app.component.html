@@ -1,0 +1,144 @@
+<main class="page-shell">
+  <section class="hero" id="start">
+    <div class="hero__backdrop"></div>
+    <div class="hero__content container">
+      <header class="topbar">
+        <a class="brand" href="#start" aria-label="Pajak Trans">
+          <img src="assets/images/Pajak-Trans-logo-04.png" alt="Pajak Trans logo" />
+        </a>
+
+        <nav class="topbar__nav" aria-label="Nawigacja">
+          <a href="#uslugi">Uslugi</a>
+          <a href="#sprzet">Sprzet</a>
+          <a href="#realizacje">Realizacje</a>
+          <a href="#kontakt">Kontakt</a>
+        </nav>
+      </header>
+
+      <div class="hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow">Roboty ziemne, wyburzenia i transport</p>
+          <h1>Nowoczesna strona dla firmy, ktora ma wygladac tak solidnie jak realizacje w terenie.</h1>
+          <p class="lead">
+            Oryginalna witryna daje dobry punkt wyjscia, ale jest technicznie przestarzala i zanieczyszczona spamem.
+            Ta wersja porzadkuje oferte, eksponuje sprzet i daje czytelny kontakt od pierwszego ekranu.
+          </p>
+
+          <div class="hero__actions">
+            <a class="button button--primary" href="tel:+48604289858">Zadzwoń: 604 289 858</a>
+            <a class="button button--ghost" href="mailto:marcin@pajak-trans.pl">Napisz e-mail</a>
+          </div>
+        </div>
+
+        <aside class="hero__panel">
+          <p class="hero__panel-label">Co poprawilem wzgledem starej strony</p>
+          <ul>
+            <li>mocniejszy pierwszy ekran z konkretnym komunikatem,</li>
+            <li>czytelny podzial oferty bez przeladowania,</li>
+            <li>lokalne assety zamiast zewnetrznych linkow HTTP,</li>
+            <li>uklad gotowy do uruchamiania po HTTPS.</li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="services container section" id="uslugi">
+    <div class="section-heading">
+      <p class="eyebrow">Zakres prac</p>
+      <h2>Najwazniejsze uslugi zebrane w prostym i sprzedajacym ukladzie.</h2>
+    </div>
+
+    <div class="services__grid">
+      @for (service of services; track service.title) {
+        <article class="service-card">
+          <h3>{{ service.title }}</h3>
+          <p>{{ service.description }}</p>
+        </article>
+      }
+    </div>
+  </section>
+
+  <section class="highlight">
+    <div class="container highlight__grid">
+      <div class="section-heading section-heading--light">
+        <p class="eyebrow">Dlaczego ta wersja jest lepsza</p>
+        <h2>Strona buduje zaufanie zamiast wygladac jak stary szablon WordPressa.</h2>
+      </div>
+
+      <div class="advantage-list">
+        @for (advantage of advantages; track advantage.title) {
+          <article class="advantage-card">
+            <h3>{{ advantage.title }}</h3>
+            <p>{{ advantage.description }}</p>
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="fleet container section" id="sprzet">
+    <div class="section-heading">
+      <p class="eyebrow">Maszyny</p>
+      <h2>Sekcja sprzetu jest konkretna i wizualnie mocniejsza od obecnej wersji z placeholderami.</h2>
+    </div>
+
+    <div class="fleet__list">
+      @for (item of fleet; track item.name) {
+        <article class="fleet-card">
+          <div class="fleet-card__image">
+            <img [src]="item.image" [alt]="item.name" />
+          </div>
+
+          <div class="fleet-card__body">
+            <p class="fleet-card__category">{{ item.category }}</p>
+            <h3>{{ item.name }}</h3>
+            <p>{{ item.description }}</p>
+          </div>
+        </article>
+      }
+    </div>
+  </section>
+
+  <section class="gallery section" id="realizacje">
+    <div class="container">
+      <div class="section-heading section-heading--center">
+        <p class="eyebrow">Realizacje</p>
+        <h2>Galeria ma wreszcie rytm, oddech i kadry, ktore pracuja na wiarygodnosc marki.</h2>
+      </div>
+
+      <div class="gallery__grid">
+        @for (item of gallery; track item.image) {
+          <figure class="gallery-card">
+            <img [src]="item.image" [alt]="item.title" />
+            <figcaption>{{ item.title }}</figcaption>
+          </figure>
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="contact container section" id="kontakt">
+    <div class="contact__card">
+      <div>
+        <p class="eyebrow">Kontakt</p>
+        <h2>Najprostsza droga do zapytania: telefon albo e-mail bez zbednych formularzy.</h2>
+        <p class="contact__text">
+          Na bazie tresci z obecnej strony zachowalem glowny kontakt i uproscilem CTA. To zwykle dziala lepiej niz
+          formularz bez jasnej informacji, co stanie sie dalej.
+        </p>
+      </div>
+
+      <div class="contact__actions">
+        <a class="contact-link" href="tel:+48604289858">
+          <span>Telefon</span>
+          <strong>604 289 858</strong>
+        </a>
+        <a class="contact-link" href="mailto:marcin@pajak-trans.pl">
+          <span>E-mail</span>
+          <strong>marcin&#64;pajak-trans.pl</strong>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
