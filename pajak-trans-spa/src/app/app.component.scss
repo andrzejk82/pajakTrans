@@ -73,7 +73,7 @@
 .hero__backdrop {
   background:
     linear-gradient(115deg, rgba(24, 23, 20, 0.88), rgba(24, 23, 20, 0.42)),
-    url('/assets/images/technic-1.jpg') center/cover;
+    url('/assets/images/mainPage.jpeg') center/cover;
   inset: 0;
   position: absolute;
 }
@@ -128,7 +128,7 @@
 
   h1 {
     font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
-    font-size: clamp(2.9rem, 6vw, 5.9rem);
+    font-size: clamp(2.1rem, 4.3vw, 4.2rem);
     letter-spacing: -0.05em;
     line-height: 0.95;
     margin: 0;
@@ -250,6 +250,7 @@
   flex-wrap: wrap;
   gap: 0.8rem 1.2rem;
   justify-content: center;
+  min-width: 0;
 
   a {
     border-radius: 999px;
@@ -272,13 +273,17 @@
 }
 
 .section-nav__cta {
+  align-items: center;
   background: var(--accent);
   border-radius: 999px;
   color: #241c0b;
+  display: inline-flex;
   flex: 0 0 auto;
   font-weight: 800;
+  justify-content: center;
   padding: 0.8rem 1rem;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .services__grid,
@@ -565,7 +570,23 @@
 
   .section-nav__inner {
     border-radius: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
     margin-top: -1.2rem;
+  }
+
+  .section-nav__links {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .section-nav__links a {
+    text-align: center;
+  }
+
+  .section-nav__cta {
+    flex: 1 1 100%;
+    width: 100%;
   }
 
   .section-nav__brand img,
