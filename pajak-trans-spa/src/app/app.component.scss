@@ -181,12 +181,14 @@
 }
 
 .hero__panel {
+  align-self: start;
   backdrop-filter: blur(16px);
   background: rgba(255, 250, 242, 0.1);
   border: 1px solid rgba(255, 250, 242, 0.18);
   border-radius: 28px;
   box-shadow: var(--shadow);
   color: #fff8ea;
+  margin-top: 2.7rem;
   padding: 1.6rem;
 
   ul {
@@ -535,6 +537,10 @@
 
   .topbar__nav {
     border-radius: 24px;
+  }
+
+  .hero__panel {
+    margin-top: 0;
   }
 
   .gallery__grid {
