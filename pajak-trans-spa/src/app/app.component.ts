@@ -38,34 +38,34 @@ export class AppComponent {
   readonly services: Service[] = [
     {
       title: 'Roboty ziemne',
-      description: 'Wykopy, niwelacje terenu i przygotowanie placu pod inwestycje prywatne oraz przemyslowe.'
+      description: 'Wykopy, niwelacje terenu i przygotowanie placu pod inwestycje prywatne oraz przemysłowe.'
     },
     {
       title: 'Transport',
-      description: 'Sprawny transport materialow sypkich, maszyn i elementow budowlanych na terenie regionu.'
+      description: 'Sprawny transport materiałów sypkich, maszyn i elementów budowlanych na terenie regionu.'
     },
     {
       title: 'Wyburzenia',
-      description: 'Bezpieczna rozbiorka obiektow z naciskiem na organizacje prac i porzadek na miejscu realizacji.'
+      description: 'Bezpieczna rozbiórka obiektów z naciskiem na organizacje prac i porządek na miejscu realizacji.'
     },
     {
-      title: 'Odsniezanie',
-      description: 'Sezonowe utrzymanie drog, placow i dojazdow do firm oraz posesji prywatnych.'
+      title: 'Odśnieżanie',
+      description: 'Sezonowe utrzymanie drog, placów i dojazdów do firm oraz posesji prywatnych.'
     }
   ];
 
   readonly advantages: Advantage[] = [
     {
       title: 'Szybka organizacja prac',
-      description: 'Krotki czas reakcji i jasne ustalenia jeszcze przed rozpoczeciem zlecenia.'
+      description: 'Krótki czas reakcji i jasne ustalenia jeszcze przed rozpoczeciem zlecenia.'
     },
     {
-      title: 'Doswiadczenie w terenie',
-      description: 'Praktyka przy roznych typach realizacji: od mniejszych prac po ciezsze roboty.'
+      title: 'Doświadczenie w terenie',
+      description: 'Praktyka przy różnych typach realizacji: od mniejszych prac po cieższe roboty.'
     },
     {
-      title: 'Sprzet dopasowany do zadania',
-      description: 'Dobor maszyn i transportu do zakresu prac zamiast uniwersalnego, przypadkowego zestawu.'
+      title: 'Sprzęt dopasowany do zadania',
+      description: 'Dobór maszyn i transportu do zakresu prac zamiast uniwersalnego, przypadkowego zestawu.'
     },
     {
       title: 'Jedna, czytelna komunikacja',
@@ -77,25 +77,25 @@ export class AppComponent {
     {
       name: 'CAT 432F2',
       category: 'Maszyny do robot ziemnych',
-      description: 'Koparko-ladowarka CAT 432F2 to wszechstronna maszyna, ktora laczy w sobie funkcjonalnosc koparki i ladowarki, idealna do roznorodnych zastosowan w budownictwie i transporcie. Dzieki swoim nowoczesnym rozwiazaniom, CAT 432F2 zapewnia niezawodnosc, efektywnosc i wygode pracy.',
+      description: 'Koparko-ladowarka CAT 432F2 to wszechstronna maszyna, ktora łaczy w sobie funkcjonalność koparki i ładowarki, idealna do różnorodnych zastosowań w budownictwie i transporcie. Dzieki swoim nowoczesnym rozwiazaniom, CAT 432F2 zapewnia niezawodnosc, efektywnosc i wygode pracy.',
       image: 'assets/images/cat432.jpg'
     },
     {
       name: 'CAT 315M',
       category: 'Maszyny do robot ziemnych',
-      description: 'Koparka obrotowa CAT 315M to niezawodne narzedzie w branzy budowlanej, ktore laczy w sobie moc, precyzje i efektywnosc. Dzieki zaawansowanej technologii, ta maszyna jest idealnym rozwiazaniem dla roznorodnych prac ziemnych i budowlanych.',
+      description: 'Koparka obrotowa CAT 315M to niezawodne narzedzie w branży budowlanej, które łaczy w sobie moc, precyzje i efektywność. Dzieki zaawansowanej technologii, ta maszyna jest idealnym rozwiązaniem dla różnorodnych prac ziemnych i budowlanych.',
       image: 'assets/images/m315.jfif'
     },
     {
       name: 'Przesiewacz frakcyjny',
       category: 'Maszyny do robot ziemnych',
-      description: 'Przesiewacz frakcyjny to niezbedne urzadzenie w branzy budowlanej, ktore umozliwia efektywne przesiewanie ziemi, piachu oraz kruszyw. Dzieki zaawansowanej technologii, przesiewacz zapewnia wysoka jakosc materialow, eliminujac zanieczyszczenia i uzyskujac jednorodne frakcje.',
+      description: 'Przesiewacz frakcyjny to niezbędne urzadzenie w branży budowlanej, które umozliwia efektywne przesiewanie ziemi, piachu oraz kruszyw. Dzięki zaawansowanej technologii, przesiewacz zapewnia wysoką jakość materialów, eliminując zanieczyszczenia i uzyskujac jednorodne frakcje.',
       image: 'assets/images/pf.png'
     },
     {
       name: 'Scania P380',
       category: 'Transport i logistyka',
-      description: 'Samochod do przewozu materialow i wsparcia realizacji wymagajacych sprawnej logistyki.',
+      description: 'Samochód do przewozu materiałów i wsparcia realizacji wymagających sprawnej logistyki.',
       image: 'assets/images/scania-p-380.jpg'
     }
   ];
