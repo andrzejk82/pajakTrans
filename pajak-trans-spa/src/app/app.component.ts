@@ -75,10 +75,22 @@ export class AppComponent {
 
   readonly fleet: FleetItem[] = [
     {
-      name: 'Volvo BL71',
+      name: 'CAT 432F2',
       category: 'Maszyny do robot ziemnych',
-      description: 'Wszechstronna koparko-ladowarka do przygotowania terenu, wykopow i prac porzadkowych.',
-      image: 'assets/images/volvo-bl-71-2.jpg'
+      description: 'Koparko-ladowarka CAT 432F2 to wszechstronna maszyna, ktora laczy w sobie funkcjonalnosc koparki i ladowarki, idealna do roznorodnych zastosowan w budownictwie i transporcie. Dzieki swoim nowoczesnym rozwiazaniom, CAT 432F2 zapewnia niezawodnosc, efektywnosc i wygode pracy.',
+      image: 'assets/images/cat432.jpg'
+    },
+    {
+      name: 'CAT 315M',
+      category: 'Maszyny do robot ziemnych',
+      description: 'Koparka obrotowa CAT 315M to niezawodne narzedzie w branzy budowlanej, ktore laczy w sobie moc, precyzje i efektywnosc. Dzieki zaawansowanej technologii, ta maszyna jest idealnym rozwiazaniem dla roznorodnych prac ziemnych i budowlanych.',
+      image: 'assets/images/m315.jfif'
+    },
+    {
+      name: 'Przesiewacz frakcyjny',
+      category: 'Maszyny do robot ziemnych',
+      description: 'Przesiewacz frakcyjny to niezbedne urzadzenie w branzy budowlanej, ktore umozliwia efektywne przesiewanie ziemi, piachu oraz kruszyw. Dzieki zaawansowanej technologii, przesiewacz zapewnia wysoka jakosc materialow, eliminujac zanieczyszczenia i uzyskujac jednorodne frakcje.',
+      image: 'assets/images/pf.png'
     },
     {
       name: 'Scania P380',
