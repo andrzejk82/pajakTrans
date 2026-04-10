@@ -288,6 +288,10 @@
   white-space: nowrap;
 }
 
+.section-nav__cta-short {
+  display: none;
+}
+
 .services__grid,
 .advantage-list {
   display: grid;
@@ -576,26 +580,51 @@
 
   .section-nav__inner {
     border-radius: 18px;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 0.25rem;
+    justify-content: space-between;
     margin-top: -1.2rem;
+    padding: 0.45rem 0.5rem;
   }
 
   .section-nav__links {
+    flex-wrap: nowrap;
     justify-content: center;
-    width: 100%;
+    gap: 0.1rem;
+    width: auto;
   }
 
   .section-nav__links a {
+    font-size: 0.68rem;
+    padding: 0.38rem 0.34rem;
     text-align: center;
+    white-space: nowrap;
   }
 
   .section-nav__cta {
-    flex: 1 1 100%;
-    width: 100%;
+    flex: 0 0 auto;
+    font-size: 0.68rem;
+    padding: 0.52rem 0.58rem;
+    width: auto;
   }
 
-  .section-nav__brand img,
+  .section-nav__cta-full {
+    display: none;
+  }
+
+  .section-nav__cta-short {
+    display: inline;
+  }
+
+  .section-nav__brand {
+    border-radius: 10px;
+    padding: 0.24rem 0.34rem;
+  }
+
+  .section-nav__brand img {
+    max-width: 60px;
+  }
+
   .brand img {
     max-width: 170px;
   }
@@ -608,5 +637,26 @@
   .fleet-card__body,
   .service-card {
     padding: 1.35rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .section-nav__inner {
+    gap: 0.18rem;
+    padding-inline: 0.35rem;
+  }
+
+  .section-nav__links a {
+    font-size: 0.61rem;
+    padding: 0.32rem 0.24rem;
+  }
+
+  .section-nav__cta {
+    font-size: 0.62rem;
+    padding: 0.46rem 0.42rem;
+  }
+
+  .section-nav__brand img {
+    max-width: 52px;
   }
 }
