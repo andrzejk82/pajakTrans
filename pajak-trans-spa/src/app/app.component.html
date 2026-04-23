@@ -133,7 +133,20 @@
         <h2>Zdjęcia z realizacji pokazują zakres naszych prac i sprzęt wykorzystywany na budowach oraz w terenie.</h2>
       </div>
 
-      <div class="gallery__grid">
+      <div class="gallery__mobile-controls" aria-label="Nawigacja galerii">
+        <p class="gallery__hint">Na telefonie przesun palcem, aby zobaczyc kolejne realizacje.</p>
+
+        <div class="gallery__arrows">
+          <button class="gallery__arrow" type="button" (click)="scrollGallery('prev')" aria-label="Poprzednie zdjecie">
+            &#8592;
+          </button>
+          <button class="gallery__arrow" type="button" (click)="scrollGallery('next')" aria-label="Nastepne zdjecie">
+            &#8594;
+          </button>
+        </div>
+      </div>
+
+      <div #galleryTrack class="gallery__grid" aria-label="Galeria realizacji">
         @for (item of gallery; track item.image) {
           <figure class="gallery-card">
             <img [src]="item.image" [alt]="item.title" />
@@ -150,7 +163,7 @@
         <p class="eyebrow">Kontakt</p>
         <h2>Skontaktuj się z nami, aby szybko ustalić zakres prac, termin i wycenę.</h2>
         <p class="contact__text">
-          Obsługujemy zlecenia zwiżzane z robotami ziemnymi, transportem i wyburzeniami. Wystarczy telefon lub e-mail,
+          Obsługujemy zlecenia związane z robotami ziemnymi, transportem i wyburzeniami. Wystarczy telefon lub e-mail,
           a przygotujemy konkretne informacje i odpowiemy na Twoje pytania.
         </p>
       </div>

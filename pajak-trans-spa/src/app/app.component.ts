@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 
 type Service = {
   title: string;
@@ -30,6 +30,8 @@ type GalleryItem = {
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+  @ViewChild('galleryTrack') private galleryTrack?: ElementRef<HTMLDivElement>;
+
   title = 'Pajak Trans';
   activeSection = 'uslugi';
 
@@ -121,6 +123,16 @@ export class AppComponent {
 
   isActive(sectionId: string): boolean {
     return this.activeSection === sectionId;
+  }
+
+  scrollGallery(direction: 'prev' | 'next'): void {
+    const track = this.galleryTrack?.nativeElement;
+    if (!track) {
+      return;
+    }
+
+    const offset = track.clientWidth * 0.9 * (direction === 'next' ? 1 : -1);
+    track.scrollBy({ left: offset, behavior: 'smooth' });
   }
 
   private updateActiveSection(): void {
