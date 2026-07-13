@@ -24,6 +24,17 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Nowoczesna strona');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Pająk-Trans to firma');
+  });
+
+  it('should render the EU funded project poster', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    const poster = compiled.querySelector<HTMLImageElement>('img[src="assets/images/plakat.png"]');
+
+    expect(compiled.textContent).toContain('Projekt dofinansowany przez Unię Europejską');
+    expect(poster).not.toBeNull();
+    expect(poster?.alt).toBe('Projekt dofinansowany przez Unię Europejską');
   });
 });

@@ -515,6 +515,31 @@
   grid-column: span 7;
 }
 
+.funding {
+  padding: 0 0 6rem;
+}
+
+.funding__poster {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  display: block;
+  overflow: hidden;
+  padding: clamp(0.75rem, 2vw, 1.25rem);
+
+  img {
+    border-radius: 16px;
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+}
+
+.contact.section {
+  padding-top: 0;
+}
+
 .contact__card {
   align-items: center;
   border-radius: 32px;
@@ -702,6 +727,7 @@
 
   .contact__card,
   .fleet-card__body,
+  .funding__poster,
   .service-card {
     padding: 1.35rem;
   }
