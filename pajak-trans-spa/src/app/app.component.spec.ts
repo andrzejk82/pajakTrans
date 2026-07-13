@@ -20,6 +20,14 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('Pajak Trans');
   });
 
+  it('should use the new CAT 432F2 fleet image', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    const cat432f2 = app.fleet.find((item) => item.name === 'CAT 432F2');
+
+    expect(cat432f2?.image).toBe('assets/images/cat432f2.jpeg');
+  });
+
   it('should use the new CAT 315M fleet image', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;

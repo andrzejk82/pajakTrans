@@ -80,7 +80,7 @@ export class AppComponent {
       name: 'CAT 432F2',
       category: 'Maszyny do robot ziemnych',
       description: 'Koparko-ladowarka CAT 432F2 to wszechstronna maszyna, ktora łaczy w sobie funkcjonalność koparki i ładowarki, idealna do różnorodnych zastosowań w budownictwie i transporcie. Dzieki swoim nowoczesnym rozwiazaniom, CAT 432F2 zapewnia niezawodnosc, efektywnosc i wygode pracy.',
-      image: 'assets/images/cat432.jpg'
+      image: 'assets/images/cat432f2.jpeg'
     },
     {
       name: 'CAT 315M',
