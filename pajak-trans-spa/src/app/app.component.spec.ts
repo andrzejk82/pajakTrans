@@ -36,6 +36,22 @@ describe('AppComponent', () => {
     expect(cat315m?.image).toBe('assets/images/cat315m.jpeg');
   });
 
+  it('should use the new Przesiewacz bebnowy fleet image', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    const przesiewacz = app.fleet.find((item) => item.description.includes('przesiewanie ziemi'));
+
+    expect(przesiewacz?.image).toBe('assets/images/przesiewacz.jpeg');
+  });
+
+  it('should use the new Scania P380 fleet image', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    const scania = app.fleet.find((item) => item.name === 'Scania P380');
+
+    expect(scania?.image).toBe('assets/images/scania.jpeg');
+  });
+
   it('should render the hero heading', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();

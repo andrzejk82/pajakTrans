@@ -89,16 +89,16 @@ export class AppComponent {
       image: 'assets/images/cat315m.jpeg'
     },
     {
-      name: 'Przesiewacz frakcyjny',
+      name: 'Przesiewacz bębnowy',
       category: 'Maszyny do robot ziemnych',
-      description: 'Przesiewacz frakcyjny to niezbędne urzadzenie w branży budowlanej, które umozliwia efektywne przesiewanie ziemi, piachu oraz kruszyw. Dzięki zaawansowanej technologii, przesiewacz zapewnia wysoką jakość materialów, eliminując zanieczyszczenia i uzyskujac jednorodne frakcje.',
-      image: 'assets/images/pf.png'
+      description: 'Przesiewacz bębnowy to niezbędne urzadzenie w branży budowlanej, które umozliwia efektywne przesiewanie ziemi, piachu oraz kruszyw. Dzięki zaawansowanej technologii, przesiewacz zapewnia wysoką jakość materialów, eliminując zanieczyszczenia i uzyskujac jednorodne frakcje.',
+      image: 'assets/images/przesiewacz.jpeg'
     },
     {
       name: 'Scania P380',
       category: 'Transport i logistyka',
       description: 'Samochód do przewozu materiałów i wsparcia realizacji wymagających sprawnej logistyki.',
-      image: 'assets/images/scania-p-380.jpg'
+      image: 'assets/images/scania.jpeg'
     }
   ];
 
