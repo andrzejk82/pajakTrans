@@ -86,7 +86,7 @@ export class AppComponent {
       name: 'CAT 315M',
       category: 'Maszyny do robot ziemnych',
       description: 'Koparka obrotowa CAT 315M to niezawodne narzedzie w branży budowlanej, które łaczy w sobie moc, precyzje i efektywność. Dzieki zaawansowanej technologii, ta maszyna jest idealnym rozwiązaniem dla różnorodnych prac ziemnych i budowlanych.',
-      image: 'assets/images/m315.jfif'
+      image: 'assets/images/cat315m.jpeg'
     },
     {
       name: 'Przesiewacz frakcyjny',

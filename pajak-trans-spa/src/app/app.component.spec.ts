@@ -20,6 +20,14 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('Pajak Trans');
   });
 
+  it('should use the new CAT 315M fleet image', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    const cat315m = app.fleet.find((item) => item.name === 'CAT 315M');
+
+    expect(cat315m?.image).toBe('assets/images/cat315m.jpeg');
+  });
+
   it('should render the hero heading', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
