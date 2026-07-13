@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 type Service = {
   title: string;
@@ -18,8 +18,12 @@ type FleetItem = {
 };
 
 type GalleryItem = {
-  title: string;
   image: string;
+};
+
+type GallerySection = {
+  title: string;
+  items: GalleryItem[];
 };
 
 @Component({
@@ -30,8 +34,6 @@ type GalleryItem = {
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  @ViewChild('galleryTrack') private galleryTrack?: ElementRef<HTMLDivElement>;
-
   title = 'Pajak Trans';
   activeSection = 'uslugi';
 
@@ -102,13 +104,94 @@ export class AppComponent {
     }
   ];
 
-  readonly gallery: GalleryItem[] = [
-    { title: 'Prace terenowe', image: 'assets/images/realizacja1.jpg' },
-    { title: 'Transport materialu', image: 'assets/images/realizacja3.jpg' },
-    { title: 'Realizacja w toku', image: 'assets/images/realizacja5.jpg' },
-    { title: 'Sprzet przy inwestycji', image: 'assets/images/realizacja8.jpg' },
-    { title: 'Roboty specjalistyczne', image: 'assets/images/realizacja12.jpg' },
-    { title: 'Finalny efekt prac', image: 'assets/images/realizacja17.jpg' }
+  readonly gallerySections: GallerySection[] = [
+    {
+      title: 'Drogi dojazdowe',
+      items: [
+        { image: 'assets/images/gallery/drogi-dojazdowe/01.jpeg' },
+        { image: 'assets/images/gallery/drogi-dojazdowe/02.jpeg' }
+      ]
+    },
+    {
+      title: 'Prace przy budowie dworca pkp',
+      items: [
+        { image: 'assets/images/gallery/prace-przy-budowie-dworca-pkp/01.jpeg' },
+        { image: 'assets/images/gallery/prace-przy-budowie-dworca-pkp/02.jpeg' },
+        { image: 'assets/images/gallery/prace-przy-budowie-dworca-pkp/03.jpeg' }
+      ]
+    },
+    {
+      title: 'Prace w sytuacjach kryzysowych',
+      items: [
+        { image: 'assets/images/gallery/prace-w-sytuacjach-kryzysowych/01.jpeg' },
+        { image: 'assets/images/gallery/prace-w-sytuacjach-kryzysowych/02.jpeg' },
+        { image: 'assets/images/gallery/prace-w-sytuacjach-kryzysowych/03.jpeg' },
+        { image: 'assets/images/gallery/prace-w-sytuacjach-kryzysowych/04.jpeg' }
+      ]
+    },
+    {
+      title: 'Przesiewacz',
+      items: [
+        { image: 'assets/images/gallery/przesiewacz/01.jpeg' },
+        { image: 'assets/images/gallery/przesiewacz/02.jpeg' },
+        { image: 'assets/images/gallery/przesiewacz/03.jpeg' },
+        { image: 'assets/images/gallery/przesiewacz/04.jpeg' },
+        { image: 'assets/images/gallery/przesiewacz/05.jpeg' },
+        { image: 'assets/images/gallery/przesiewacz/06.jpeg' },
+        { image: 'assets/images/gallery/przesiewacz/07.jpeg' },
+        { image: 'assets/images/gallery/przesiewacz/08.jpeg' },
+        { image: 'assets/images/gallery/przesiewacz/09.jpeg' },
+        { image: 'assets/images/gallery/przesiewacz/10.jpeg' }
+      ]
+    },
+    {
+      title: 'Roboty ziemne',
+      items: [
+        { image: 'assets/images/gallery/roboty-ziemne/01.jpeg' },
+        { image: 'assets/images/gallery/roboty-ziemne/02.jpeg' },
+        { image: 'assets/images/gallery/roboty-ziemne/03.jpeg' },
+        { image: 'assets/images/gallery/roboty-ziemne/04.jpeg' },
+        { image: 'assets/images/gallery/roboty-ziemne/05.jpeg' },
+        { image: 'assets/images/gallery/roboty-ziemne/06.jpeg' },
+        { image: 'assets/images/gallery/roboty-ziemne/07.jpeg' },
+        { image: 'assets/images/gallery/roboty-ziemne/08.jpeg' },
+        { image: 'assets/images/gallery/roboty-ziemne/09.jpeg' },
+        { image: 'assets/images/gallery/roboty-ziemne/10.jpeg' },
+        { image: 'assets/images/gallery/roboty-ziemne/11.jpeg' },
+        { image: 'assets/images/gallery/roboty-ziemne/12.jpeg' }
+      ]
+    },
+    {
+      title: 'Wyburzenia',
+      items: [
+        { image: 'assets/images/gallery/wyburzenia/01.jpeg' },
+        { image: 'assets/images/gallery/wyburzenia/02.jpeg' },
+        { image: 'assets/images/gallery/wyburzenia/03.jpeg' },
+        { image: 'assets/images/gallery/wyburzenia/04.jpeg' },
+        { image: 'assets/images/gallery/wyburzenia/05.jpeg' },
+        { image: 'assets/images/gallery/wyburzenia/06.jpeg' },
+        { image: 'assets/images/gallery/wyburzenia/07.jpeg' },
+        { image: 'assets/images/gallery/wyburzenia/08.jpeg' },
+        { image: 'assets/images/gallery/wyburzenia/09.jpeg' },
+        { image: 'assets/images/gallery/wyburzenia/10.jpeg' },
+        { image: 'assets/images/gallery/wyburzenia/11.jpeg' },
+        { image: 'assets/images/gallery/wyburzenia/12.jpeg' }
+      ]
+    },
+    {
+      title: 'Wykopy',
+      items: [
+        { image: 'assets/images/gallery/wykopy/01.jpeg' },
+        { image: 'assets/images/gallery/wykopy/02.jpeg' },
+        { image: 'assets/images/gallery/wykopy/03.jpeg' },
+        { image: 'assets/images/gallery/wykopy/04.jpeg' },
+        { image: 'assets/images/gallery/wykopy/05.jpeg' },
+        { image: 'assets/images/gallery/wykopy/06.jpeg' },
+        { image: 'assets/images/gallery/wykopy/07.jpeg' },
+        { image: 'assets/images/gallery/wykopy/08.jpeg' },
+        { image: 'assets/images/gallery/wykopy/09.jpeg' }
+      ]
+    }
   ];
 
   @HostListener('window:scroll')
@@ -125,12 +208,7 @@ export class AppComponent {
     return this.activeSection === sectionId;
   }
 
-  scrollGallery(direction: 'prev' | 'next'): void {
-    const track = this.galleryTrack?.nativeElement;
-    if (!track) {
-      return;
-    }
-
+  scrollGallery(track: HTMLElement, direction: 'prev' | 'next'): void {
     const offset = track.clientWidth * 0.9 * (direction === 'next' ? 1 : -1);
     track.scrollBy({ left: offset, behavior: 'smooth' });
   }

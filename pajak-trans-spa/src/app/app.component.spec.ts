@@ -52,6 +52,36 @@ describe('AppComponent', () => {
     expect(scania?.image).toBe('assets/images/scania.jpeg');
   });
 
+  it('should expose seven gallery sections with folder titles and normalized image paths', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+
+    expect(app.gallerySections.map((section) => section.title)).toEqual([
+      'Drogi dojazdowe',
+      'Prace przy budowie dworca pkp',
+      'Prace w sytuacjach kryzysowych',
+      'Przesiewacz',
+      'Roboty ziemne',
+      'Wyburzenia',
+      'Wykopy',
+    ]);
+    expect(app.gallerySections).toHaveSize(7);
+    expect(app.gallerySections[0].items[0].image).toBe('assets/images/gallery/drogi-dojazdowe/01.jpeg');
+    expect(app.gallerySections[6].items[0].image).toBe('assets/images/gallery/wykopy/01.jpeg');
+  });
+
+  it('should render seven gallery carousels with section headings', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    const sections = compiled.querySelectorAll('.gallery-carousel');
+
+    expect(sections).toHaveSize(7);
+    expect(compiled.textContent).toContain('Drogi dojazdowe');
+    expect(compiled.textContent).toContain('Prace przy budowie dworca pkp');
+    expect(compiled.textContent).toContain('Wykopy');
+  });
+
   it('should render the hero heading', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();

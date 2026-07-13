@@ -133,25 +133,47 @@
         <h2>Zdjęcia z realizacji pokazują zakres naszych prac i sprzęt wykorzystywany na budowach oraz w terenie.</h2>
       </div>
 
-      <div class="gallery__mobile-controls" aria-label="Nawigacja galerii">
-        <p class="gallery__hint">Na telefonie przesun palcem, aby zobaczyc kolejne realizacje.</p>
+      <div class="gallery__sections">
+        @for (section of gallerySections; track section.title) {
+          <section class="gallery-carousel" [attr.aria-label]="'Galeria ' + section.title">
+            <div class="gallery-carousel__header">
+              <div>
+                <p class="eyebrow">{{ section.title }}</p>
+                <h3>{{ section.title }}</h3>
+              </div>
 
-        <div class="gallery__arrows">
-          <button class="gallery__arrow" type="button" (click)="scrollGallery('prev')" aria-label="Poprzednie zdjecie">
-            &#8592;
-          </button>
-          <button class="gallery__arrow" type="button" (click)="scrollGallery('next')" aria-label="Nastepne zdjecie">
-            &#8594;
-          </button>
-        </div>
-      </div>
+              <div class="gallery-carousel__controls">
+                <p class="gallery__hint">Przesun lub uzyj strzalek, aby zobaczyc kolejne zdjecia.</p>
 
-      <div #galleryTrack class="gallery__grid" aria-label="Galeria realizacji">
-        @for (item of gallery; track item.image) {
-          <figure class="gallery-card">
-            <img [src]="item.image" [alt]="item.title" />
-            <figcaption>{{ item.title }}</figcaption>
-          </figure>
+                <div class="gallery__arrows">
+                  <button
+                    class="gallery__arrow"
+                    type="button"
+                    (click)="scrollGallery(track, 'prev')"
+                    [attr.aria-label]="'Poprzednie zdjecie w galerii ' + section.title"
+                  >
+                    &#8592;
+                  </button>
+                  <button
+                    class="gallery__arrow"
+                    type="button"
+                    (click)="scrollGallery(track, 'next')"
+                    [attr.aria-label]="'Nastepne zdjecie w galerii ' + section.title"
+                  >
+                    &#8594;
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div #track class="gallery__track" [attr.data-gallery-section]="section.title">
+              @for (item of section.items; track item.image) {
+                <figure class="gallery-card">
+                  <img [src]="item.image" [alt]="section.title" />
+                </figure>
+              }
+            </div>
+          </section>
         }
       </div>
     </div>
