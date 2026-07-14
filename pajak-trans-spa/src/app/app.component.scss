@@ -435,6 +435,7 @@
   border-radius: 28px;
   box-shadow: var(--shadow);
   padding: 1.4rem;
+  width: 100%;
 }
 
 .gallery-carousel__header,
@@ -493,11 +494,8 @@
 }
 
 .gallery__track {
-  display: grid;
+  display: flex;
   gap: 1rem;
-  grid-auto-columns: minmax(280px, 34%);
-  grid-auto-flow: column;
-  grid-template-columns: none;
   overflow-x: auto;
   padding: 0 0.15rem 0.75rem;
   scroll-padding-inline: 0.15rem;
@@ -509,8 +507,9 @@
 .gallery-card {
   background: var(--surface-strong);
   border-radius: 24px;
+  flex: 0 0 100%;
+  aspect-ratio: 4 / 3;
   margin: 0;
-  min-height: 260px;
   overflow: hidden;
   position: relative;
   scroll-snap-align: start;
@@ -721,11 +720,10 @@
 
   .gallery__track {
     gap: 0.9rem;
-    grid-auto-columns: minmax(82%, 1fr);
   }
 
   .gallery-card {
-    min-height: 260px;
+    flex-basis: 100%;
   }
 
   .contact__card,

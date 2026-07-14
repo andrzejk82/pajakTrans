@@ -209,7 +209,7 @@ export class AppComponent {
   }
 
   scrollGallery(track: HTMLElement, direction: 'prev' | 'next'): void {
-    const offset = track.clientWidth * 0.9 * (direction === 'next' ? 1 : -1);
+    const offset = track.clientWidth * (direction === 'next' ? 1 : -1);
     track.scrollBy({ left: offset, behavior: 'smooth' });
   }
 

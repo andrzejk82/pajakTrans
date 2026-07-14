@@ -82,6 +82,20 @@ describe('AppComponent', () => {
     expect(compiled.textContent).toContain('Wykopy');
   });
 
+  it('should scroll a gallery track by its visible width', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    const scrollBy = jasmine.createSpy('scrollBy');
+    const track = {
+      clientWidth: 400,
+      scrollBy,
+    } as unknown as HTMLElement;
+
+    app.scrollGallery(track, 'next');
+
+    expect(scrollBy).toHaveBeenCalledOnceWith({ left: 400, behavior: 'smooth' });
+  });
+
   it('should render the hero heading', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
