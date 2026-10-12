@@ -18,7 +18,8 @@ type FleetItem = {
 };
 
 type GalleryItem = {
-  image: string;
+  image?: string;
+  video?: string;
 };
 
 type GallerySection = {
@@ -106,10 +107,18 @@ export class AppComponent {
 
   readonly gallerySections: GallerySection[] = [
     {
-      title: 'Drogi dojazdowe',
+      title: 'Przesiewacz',
       items: [
-        { image: 'assets/images/gallery/drogi-dojazdowe/01.jpeg' },
-        { image: 'assets/images/gallery/drogi-dojazdowe/02.jpeg' }
+        { image: 'assets/images/gallery/przesiewacz/01.jpeg' },
+        { image: 'assets/images/gallery/przesiewacz/02.jpeg' },
+        { image: 'assets/images/gallery/przesiewacz/03.jpeg' },
+        { image: 'assets/images/gallery/przesiewacz/04.jpeg' },
+        { image: 'assets/images/gallery/przesiewacz/05.jpeg' },
+        { image: 'assets/images/gallery/przesiewacz/06.jpeg' },
+        { image: 'assets/images/gallery/przesiewacz/07.jpeg' },
+        { image: 'assets/images/gallery/przesiewacz/08.jpeg' },
+        { image: 'assets/images/gallery/przesiewacz/09.jpeg' },
+        { image: 'assets/images/gallery/przesiewacz/10.jpeg' }
       ]
     },
     {
@@ -127,21 +136,6 @@ export class AppComponent {
         { image: 'assets/images/gallery/prace-w-sytuacjach-kryzysowych/02.jpeg' },
         { image: 'assets/images/gallery/prace-w-sytuacjach-kryzysowych/03.jpeg' },
         { image: 'assets/images/gallery/prace-w-sytuacjach-kryzysowych/04.jpeg' }
-      ]
-    },
-    {
-      title: 'Przesiewacz',
-      items: [
-        { image: 'assets/images/gallery/przesiewacz/01.jpeg' },
-        { image: 'assets/images/gallery/przesiewacz/02.jpeg' },
-        { image: 'assets/images/gallery/przesiewacz/03.jpeg' },
-        { image: 'assets/images/gallery/przesiewacz/04.jpeg' },
-        { image: 'assets/images/gallery/przesiewacz/05.jpeg' },
-        { image: 'assets/images/gallery/przesiewacz/06.jpeg' },
-        { image: 'assets/images/gallery/przesiewacz/07.jpeg' },
-        { image: 'assets/images/gallery/przesiewacz/08.jpeg' },
-        { image: 'assets/images/gallery/przesiewacz/09.jpeg' },
-        { image: 'assets/images/gallery/przesiewacz/10.jpeg' }
       ]
     },
     {
@@ -190,6 +184,14 @@ export class AppComponent {
         { image: 'assets/images/gallery/wykopy/07.jpeg' },
         { image: 'assets/images/gallery/wykopy/08.jpeg' },
         { image: 'assets/images/gallery/wykopy/09.jpeg' }
+      ]
+    },
+    {
+      title: 'Drogi dojazdowe',
+      items: [
+        { image: 'assets/images/gallery/drogi-dojazdowe/01.jpeg' },
+        { image: 'assets/images/gallery/drogi-dojazdowe/02.jpeg' },
+        { video: 'assets/images/gallery/drogi-dojazdowe/drogi_dojazdowe2.mp4' }
       ]
     }
   ];

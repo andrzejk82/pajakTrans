@@ -57,17 +57,17 @@ describe('AppComponent', () => {
     const app = fixture.componentInstance;
 
     expect(app.gallerySections.map((section) => section.title)).toEqual([
-      'Drogi dojazdowe',
+      'Przesiewacz',
       'Prace przy budowie dworca pkp',
       'Prace w sytuacjach kryzysowych',
-      'Przesiewacz',
       'Roboty ziemne',
       'Wyburzenia',
       'Wykopy',
+      'Drogi dojazdowe',
     ]);
     expect(app.gallerySections).toHaveSize(7);
-    expect(app.gallerySections[0].items[0].image).toBe('assets/images/gallery/drogi-dojazdowe/01.jpeg');
-    expect(app.gallerySections[6].items[0].image).toBe('assets/images/gallery/wykopy/01.jpeg');
+    expect(app.gallerySections[0].items[0].image).toBe('assets/images/gallery/przesiewacz/01.jpeg');
+    expect(app.gallerySections[6].items[0].image).toBe('assets/images/gallery/drogi-dojazdowe/01.jpeg');
   });
 
   it('should render seven gallery carousels with section headings', () => {

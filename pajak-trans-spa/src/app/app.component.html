@@ -165,9 +165,13 @@
             </div>
 
             <div #track class="gallery__track" [attr.data-gallery-section]="section.title">
-              @for (item of section.items; track item.image) {
+              @for (item of section.items; track item.image || item.video) {
                 <figure class="gallery-card">
-                  <img [src]="item.image" [alt]="section.title" />
+                  @if (item.video) {
+                    <video [src]="item.video" controls preload="metadata"></video>
+                  } @else {
+                    <img [src]="item.image" [alt]="section.title" />
+                  }
                 </figure>
               }
             </div>
@@ -193,6 +197,21 @@
       <img
         src="assets/images/plakat.png"
         alt="Projekt dofinansowany przez Unię Europejską"
+        loading="lazy"
+        decoding="async"
+      />
+    </a>
+
+    <a
+      class="funding__poster"
+      href="assets/images/miedzy-wisla-logo.png"
+      target="_blank"
+      rel="noopener"
+      aria-label="Otwórz logo partnera projektu"
+    >
+      <img
+        src="assets/images/miedzy-wisla-logo.png"
+        alt="Logo partnera projektu"
         loading="lazy"
         decoding="async"
       />

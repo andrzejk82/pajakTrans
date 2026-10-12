@@ -514,7 +514,8 @@
   position: relative;
   scroll-snap-align: start;
 
-  img {
+  img,
+  video {
     display: block;
     height: 100%;
     object-fit: cover;
@@ -539,6 +540,10 @@
   display: block;
   overflow: hidden;
   padding: clamp(0.75rem, 2vw, 1.25rem);
+
+  & + & {
+    margin-top: 1.5rem;
+  }
 
   img {
     border-radius: 16px;
